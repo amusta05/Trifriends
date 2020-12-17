@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Profile</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link href="profile.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section id="title">
+        <div class="container-fluid">
+
+            <!-- Nav Bar -->
+
+            <nav class="navbar  navbar-expand-lg  navbar-dark">
+
+                <a class="navbar-brand" href="index.html">tinfriends</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="matches.html">Matches</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="swipe.html">Swipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html">Settings</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4 pb-5">
+
+                <div class="author-card pb-3">
+
+                    <div class="author-card-profile">
+                        <div class="author-card-avatar"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="John Doe">
+                        </div>
+                        <div class="author-card-details">
+                            <h5 class="author-card-name text-lg">John Doe</h5><span class="author-card-position">Joined February 06, 2017</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 pb-5">
+                <form class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-fn">First Name</label>
+                            <input id="firstname" class="form-control" type="text" id="account-fn" value="John" required="Please enter  your first name">
+                            <div id="first_error" class="error hidden">Please enter a first name</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-ln">Last Name</label>
+                            <input id="lastname" class="form-control" type="text" id="account-ln" value="Doe" required="Please enter your last name">
+                            <div id="last_error" class="error hidden">Please enter a last name</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-email">E-mail Address</label>
+                            <input class="form-control" type="email" id="account-email" value="john.doe@example.com" disabled="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-phone">Phone Number</label>
+                            <input id="myform_phone" class="form-control" type="text" id="account-phone" value="(123) 345-5678" required="Please enter a valid phone number">
+                            <div id="phone_error" class="error hidden">Please enter a valid phone number</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-pass">New Password</label>
+                            <input class="form-control" type="password" id="account-pass">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-confirm-pass">Confirm Password</label>
+                            <input class="form-control" type="password" id="account-confirm-pass">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <hr class="mt-2 mb-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="custom-control custom-checkbox d-block">
+                                <input class="custom-control-input" type="checkbox" id="subscribe_me" checked="">
+                            </div>
+                            <button id="myBtn" class="btn btn-style-1 btn-primary" type="button">Update Profile</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        // Get value on button click and show alert
+
+
+        $("#myBtn").click(function() {
+
+            var firstName = $("#firstname").val();
+
+            var lastName = $("#lastname").val();
+            var firstPassword = $("#account-pass").val();
+            var confrimPassword = $("#account-confirm-pass").val();
+            if (firstName.length == 0) {
+                document.getElementById('first_error').classList.remove('hidden');
+            } else {
+                document.getElementById('first_error').classList.add('hidden');
+            }
+
+            if (lastName.length == 0) {
+                document.getElementById('last_error').classList.remove('hidden');
+            } else {
+                document.getElementById('last_error').classList.add('hidden');
+            }
+            if (firstPassword != confrimPassword) {
+                alert("Passwords do not match");
+            } else if (firstName.length != 0 && lastName.length != 0) {
+
+
+                var phone = $("#myform_phone").val()
+                if (!validatePhoneNumber(phone)) {
+                    document.getElementById('phone_error').classList.remove('hidden');
+                } else {
+                    document.getElementById('phone_error').classList.add('hidden')
+                    alert("Profile updated successfully!");
+                }
+
+            }
+        });
+
+        function validatePhoneNumber(input_str) {
+            var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+            return re.test(input_str);
+        }
+
+
+    });
+</script>
+
+</html>
